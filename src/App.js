@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import TagSelector from "./Components/TagSelector";
 
 function App() {
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  function handleTagSelect(tag) {
+    setSelectedTags((prevSelectedTags) => {
+      const newSelectedTags = [...prevSelectedTags];
+      const tagIndex = newSelectedTags.indexOf(tag);
+      if (tagIndex !== -1) {
+        newSelectedTags.splice(tagIndex, 1);
+      } else {
+        newSelectedTags.push(tag);
+      }
+      return newSelectedTags;
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <input
+        type="text"
+        className="InputField"
+        value={selectedTags.join(", ")}
+        onChange={(event) =>
+          setSelectedTags(event.target.value.split(",").map((t) => t.trim()))
+        }
+      />
+      <div className="container">
+        <TagSelector
+          label="Emotions"
+          tags={["Happy", "Sad", "Angry", "Surprised", "Confused"]}
+          onTagSelect={handleTagSelect}
+          selectedTags={selectedTags}
+        />
+        <TagSelector
+          label="Colors"
+          tags={["Red", "Green", "Blue", "Yellow", "Purple"]}
+          onTagSelect={handleTagSelect}
+          selectedTags={selectedTags}
+        />
+        <TagSelector
+          label="Fruits"
+          tags={["Apple", "Banana", "Orange", "Mango", "Pineapple"]}
+          onTagSelect={handleTagSelect}
+          selectedTags={selectedTags}
+        />
+      </div>
     </div>
   );
 }

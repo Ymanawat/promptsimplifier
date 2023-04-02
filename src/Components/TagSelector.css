@@ -1,0 +1,32 @@
+.tag-container{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.tag-label {
+  background-color: white;
+  color: black;
+  padding: 8px;
+}
+
+.tag {
+  background-color: gray;
+  color: white;
+  padding: 8px;
+  margin: 8px 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.tag.selected {
+  background-color: white;
+  color: black;
+}
+
+.tag-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
