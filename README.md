@@ -6,8 +6,6 @@ With the PromptSimplifier, users can select their desired subject and background
 
 Once the prompt has been enhanced, our app generates an image using the stable diffusion Text-to-Image API. This means that users can create a prompt and immediately see a visual representation of it, sparking creativity and inspiration.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Challenges we faced: 
 
 One of the main challenges we encountered was that we were initially planning to incorporate AI photography into the app, but we were unable to access the GPU resources we needed from AWS. This forced us to pivot our focus and develop the prompt helper feature instead.
