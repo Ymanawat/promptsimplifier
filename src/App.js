@@ -88,31 +88,26 @@ function App() {
             <TagSelector
               label="Art Medium"
               tags={["Illustration", "Photo", "Digital Art", "Painting"]}
-              onTagSelect={() => {}}
               onChange={setArtMedium}
             />
             <TagSelector
               label="Subject"
               tags={["Person", "Men", "Women", "Dog"]}
-              onTagSelect={() => {}}
               onChange={setSubject}
             />
             <TagSelector
               label="Action"
               tags={["Standing", "Running", "Fighting", "Dancing"]}
-              onTagSelect={() => {}}
               onChange={setAction}
             />
             <TagSelector
               label="Attire"
               tags={["Casual", "Saree", "Hoodie", "Suit"]}
-              onTagSelect={() => {}}
               onChange={setAttire}
             />
             <TagSelector
               label="Background"
               tags={["Sunny", "Cloudy", "Rainy", "Hilly"]}
-              onTagSelect={() => {}}
               onChange={setBackground}
             />
             <TagSelector
@@ -123,7 +118,6 @@ function App() {
                 "Ghibhli Studios",
                 "Ily Kuvshinov",
               ]}
-              onTagSelect={() => {}}
               onChange={setArtist}
             />
           </div>
