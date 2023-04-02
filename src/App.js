@@ -12,7 +12,10 @@ function App() {
   const [artist, setArtist] = useState("");
   const [inputValue, setInputValue] = useState("");
 
-  const combinedString = `${artMedium} ${subject} ${action} ${attire} ${background} ${artist} ${inputValue}`;
+  const prompt = `${artMedium} ${subject} ${action} ${attire} ${background} ${artist}`;
+  const inputValueWithPrompt = inputValue.startsWith(prompt)
+    ? inputValue
+    : `${prompt} ${inputValue}`;
 
   return (
     <>
@@ -24,12 +27,11 @@ function App() {
         <input
           type="text"
           className="InputField"
-          value={
-            combinedString === "      " ? "" : `${combinedString}${inputValue}`
-          }
+          value={inputValueWithPrompt === prompt ? "" : inputValueWithPrompt}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Your Simplified Prompt Here"
         />
+
         <div className="container">
           <TagSelector
             label="Art Medium"
