@@ -24,7 +24,7 @@ function TagSelector({ label, tags, onChange }) {
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
-    const result = selected ? `${selected} ${event.target.value}` : "";
+    const result = `${selected} ${event.target.value}`;
     onChange(result);
   }
 
