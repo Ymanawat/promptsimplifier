@@ -3,40 +3,61 @@ import "./App.css";
 import TagSelector from "./Components/TagSelector";
 
 function App() {
-  const [emotion, setEmotion] = useState("");
-  const [color, setColor] = useState("");
-  const [fruit, setFruit] = useState("");
+  const [artMedium, setArtMedium] = useState("");
+  const [subject, setSubject] = useState("");
+  const [action, setAction] = useState("");
+  const [attire, setAttire] = useState("");
+  const [background, setBackground] = useState("");
+  const [artist, setArtist] = useState("");
   const [inputValue, setInputValue] = useState("");
 
-  const combinedString = `${emotion} ${color} ${fruit} ${inputValue}`;
+  const combinedString = `${artMedium}, ${subject}, ${action}, ${attire}, ${background}, ${artist}, ${inputValue}`;
 
   return (
     <div className="main">
       <input
         type="text"
         className="InputField"
-        value={inputValue}
-        onChange={(e) => setInputValue(combinedString)}
-        placeholder={combinedString}
+        value={combinedString === ", , , , , , " ? "" : `${combinedString}${inputValue}`}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Your Simplified Prompt Here"
       />
       <div className="container">
         <TagSelector
-          label="Emotions"
-          tags={["happy", "sad", "angry"]}
+          label="Art Medium"
+          tags={["Illustration", "Photo", "Digital Art", "Painting"]}
           onTagSelect={() => {}}
-          onChange={setEmotion}
+          onChange={setArtMedium}
         />
         <TagSelector
-          label="Color"
-          tags={["red", "green", "blue"]}
+          label="Subject"
+          tags={["Person", "Men", "Women", "Dog"]}
           onTagSelect={() => {}}
-          onChange={setColor}
+          onChange={setSubject}
         />
         <TagSelector
-          label="Fruit"
-          tags={["apple", "banana", "orange"]}
+          label="Action"
+          tags={["Standing", "Running", "Fighting", "Dancing"]}
           onTagSelect={() => {}}
-          onChange={setFruit}
+          onChange={setAction}
+        />
+        <TagSelector
+          label="Attire"
+          tags={["Casual", "Saree", "Hoodie", "Suit"]}
+          onTagSelect={() => {}}
+          onChange={setAttire}
+        />
+        <TagSelector
+          label="Background"
+          tags={["Sunny", "Cloudy", "Rainy", "Hilly"]}
+          onTagSelect={() => {}}
+          onChange={setBackground}
+        />
+        <TagSelector
+          label="Artist"
+          tags={["Greg rutkowski", "Ross draws", "Ghibhli Studios", "Ily Kuvshinov"]}
+          onTagSelect={() => {}}
+          onChange={setArtist}
         />
       </div>
       <button className="generate-button">

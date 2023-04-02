@@ -18,13 +18,16 @@ function TagSelector({ label, tags, onChange }) {
       }
     });
 
-    const result = tag ? `${tag} ${inputValue}` : "";
+    const result = tag ? `${tag}, ${inputValue}` : "";
     onChange(result);
   }
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
-    const result = `${selected} ${event.target.value}`;
+    let result = event.target.value;
+    if (selected) {
+      result = `${selected} ${event.target.value}`;
+    }
     onChange(result);
   }
 
@@ -40,7 +43,13 @@ function TagSelector({ label, tags, onChange }) {
           {tag}
         </button>
       ))}
-      <input type="text" className="tag-input" value={inputValue} placeholder="Custom Input" onChange={handleInputChange} />
+      <input
+        type="text"
+        className="tag-input"
+        value={inputValue}
+        placeholder="Custom Input"
+        onChange={handleInputChange}
+      />
     </div>
   );
 }
