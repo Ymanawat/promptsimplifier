@@ -36,6 +36,13 @@
   align-items: center;
 }
 
+.main form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .InputField{
   width: 1100px;
   height: 32px;

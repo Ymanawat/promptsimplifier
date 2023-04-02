@@ -130,7 +130,7 @@ function App() {
           )}
         </form>
         {imageR && (
-          <img style={{ height: "500px", width: "500px" }} src={imageR.src} />
+          <img style={{ height: "500px", width: "500px" }} src={imageR.src} alt='imageR' />
         )}
       </div>
     </>
