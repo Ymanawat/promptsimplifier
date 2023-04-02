@@ -29,19 +29,45 @@
 }
 
 .main{
-  width: 100vw;
-  height: 100vw;
-  padding: 64px;
+  padding: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .InputField{
   width: 1100px;
-  padding: 8px;
+  height: 32px;
+  padding: 16px;
+  margin: 32px;
+  border-radius: 8px;
+  font-size: medium;
 }
 
 .container{
+  align-items: center;
   display: flex;
   flex-direction: row;
+}
+
+.generate-button{
+  display: flex;
+  width: 1100px;
+  height: auto;
+  padding: 16px;
+  margin: 32px;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: rgba(0, 154, 241, 1);
+  border: 2px solid rgba(0, 154, 241, 1);
+  color: white;
+  font-size: medium;
+}
+
+.generate-button :hover{
+  background-color: rgb(0, 100, 158);
+  border: 2px solid rgb(0, 100, 158);
 }
 
 @keyframes App-logo-spin {

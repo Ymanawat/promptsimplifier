@@ -3,51 +3,45 @@ import "./App.css";
 import TagSelector from "./Components/TagSelector";
 
 function App() {
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [emotion, setEmotion] = useState("");
+  const [color, setColor] = useState("");
+  const [fruit, setFruit] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
-  function handleTagSelect(tag) {
-    setSelectedTags((prevSelectedTags) => {
-      const newSelectedTags = [...prevSelectedTags];
-      const tagIndex = newSelectedTags.indexOf(tag);
-      if (tagIndex !== -1) {
-        newSelectedTags.splice(tagIndex, 1);
-      } else {
-        newSelectedTags.push(tag);
-      }
-      return newSelectedTags;
-    });
-  }
+  const combinedString = `${emotion} ${color} ${fruit} ${inputValue}`;
 
   return (
     <div className="main">
       <input
         type="text"
         className="InputField"
-        value={selectedTags.join(", ")}
-        onChange={(event) =>
-          setSelectedTags(event.target.value.split(",").map((t) => t.trim()))
-        }
+        value={inputValue}
+        onChange={(e) => setInputValue(combinedString)}
+        placeholder={combinedString}
       />
       <div className="container">
         <TagSelector
-          label="Emotions"
-          tags={["Happy", "Sad", "Angry", "Surprised", "Confused"]}
-          onTagSelect={handleTagSelect}
-          selectedTags={selectedTags}
+          label="Select an emotion:"
+          tags={["happy", "sad", "angry"]}
+          onTagSelect={() => {}}
+          onChange={setEmotion}
         />
         <TagSelector
-          label="Colors"
-          tags={["Red", "Green", "Blue", "Yellow", "Purple"]}
-          onTagSelect={handleTagSelect}
-          selectedTags={selectedTags}
+          label="Select a color:"
+          tags={["red", "green", "blue"]}
+          onTagSelect={() => {}}
+          onChange={setColor}
         />
         <TagSelector
-          label="Fruits"
-          tags={["Apple", "Banana", "Orange", "Mango", "Pineapple"]}
-          onTagSelect={handleTagSelect}
-          selectedTags={selectedTags}
+          label="Select a fruit:"
+          tags={["apple", "banana", "orange"]}
+          onTagSelect={() => {}}
+          onChange={setFruit}
         />
       </div>
+      <button className="generate-button">
+        <span>Generate Image</span>
+      </button>
     </div>
   );
 }
