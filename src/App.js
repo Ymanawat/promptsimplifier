@@ -21,19 +21,19 @@ function App() {
       />
       <div className="container">
         <TagSelector
-          label="Select an emotion:"
+          label="Emotions"
           tags={["happy", "sad", "angry"]}
           onTagSelect={() => {}}
           onChange={setEmotion}
         />
         <TagSelector
-          label="Select a color:"
+          label="Color"
           tags={["red", "green", "blue"]}
           onTagSelect={() => {}}
           onChange={setColor}
         />
         <TagSelector
-          label="Select a fruit:"
+          label="Fruit"
           tags={["apple", "banana", "orange"]}
           onTagSelect={() => {}}
           onChange={setFruit}
