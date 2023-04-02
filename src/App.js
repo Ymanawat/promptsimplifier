@@ -71,7 +71,7 @@ function App() {
   return (
     <>
       <div style={{ margin: "32px" }}>
-        <img src={logo} />
+        <img src={logo} alt="Logo" />
       </div>
 
       <div className="main">
