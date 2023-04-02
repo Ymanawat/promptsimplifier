@@ -15,9 +15,7 @@ function App() {
   const [imageR, setImage] = useState(null);
 
   const prompt = `${artMedium} ${subject} ${action} ${attire} ${background} ${artist}`;
-  const inputValueWithPrompt = inputValue.startsWith(prompt)
-    ? inputValue
-    : `${prompt} ${inputValue}`;
+  const inputValueWithPrompt = inputValue.startsWith(prompt) ? inputValue : `${prompt} ${inputValue}`;
 
   const generate = async (e) => {
     e.preventDefault();
@@ -62,6 +60,7 @@ function App() {
         const imageData = json.artifacts[0].base64;
         const img = new Image();
         img.src = `data:image/png;base64,${imageData}`;
+        img.alt = "Generated Image";
         setImage(img);
         setLoading(false);
       }
