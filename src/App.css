@@ -29,7 +29,7 @@
 }
 
 .main{
-  padding: 128px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
