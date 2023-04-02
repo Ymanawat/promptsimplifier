@@ -9,6 +9,7 @@ With the PromptSimplifier, users can select their desired subject and background
 Once the prompt has been enhanced, our app generates an image using the stable diffusion Text-to-Image API. This means that users can create a prompt and immediately see a visual representation of it, sparking creativity and inspiration.
 
 ## Screenshot:
+[SC1](https://i.postimg.cc/VkpVgq23/Whats-App-Image-2023-04-02-at-11-19-38-PM-1.jpg)
 
 ## Challenges we faced: 
 
