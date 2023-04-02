@@ -1,3 +1,5 @@
+#Live Link: https://simpleprompt.netlify.app/
+
 # Project Description:
 
 ProSnapAI is excited to present PromptSimplifier, an app designed to simplify the prompt creation process for writers and artists alike. Our app provides users with a user-friendly UI that offers a variety of helpful options to create a prompt quickly and easily.
@@ -19,3 +21,4 @@ We also faced some technical challenges with integrating the natural language pr
 Despite these challenges, we are proud of what we have achieved with PromptSimplifier and are excited to present it at Stranger Hacks: GPT Era.
 
 ## Youtube Demo Video:
+
