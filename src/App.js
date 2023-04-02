@@ -50,7 +50,7 @@ function App() {
           headers: {
             "Content-Type": "application/json",
             Authorization:
-              "sk-dUgP0fk9HgAHX7yLADMOvD9YCOgPuSPDMwYLJKP3RDlWn44m",
+              "sk-ECZj7xz0J3Y1xcf6O7tapqBxcaRmYdZ4GSE9fhoTbyDf5kSh",
           },
           body: JSON.stringify(newPrompt),
         }
